@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="zxx">
+
+<head>
+    <!-- BASIC META-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Project</title>
+    <!-- FAVICON -->
+    <link rel="apple-touch-icon" href="{% static 'main/img/favicon/apple-touch-icon.png' %}">
+    <link rel="icon" href="{% static 'main/img/favicon/favicon.ico' %}">
+    <!-- WEB FONTS  -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <!-- BOOTSTRAP MIN CSS -->
+    <link href="{% static 'main/css/bootstrap.min.css' %}" rel="stylesheet">
+    <!-- ALL PLUGINS CSS -->
+    <link href="{% static 'main/css/elements.css' %}" rel="stylesheet">
+    <!-- THEME STYLE CSS -->
+    <link href="{% static 'main/style1.css' %}" rel="stylesheet">
+    <!-- RESPONSIVE CSS -->
+    <link href="{% static 'main/responsive1.css' %}" rel="stylesheet">
+    <!-- HEAD LIBS -->
+    <script src="{% static 'main/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js' %}"></script>
+
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+     <!-- HEADER TOP -->
+ 
+
+    <!-- NAVIGATION -->
+    <div class="navigation-bar stick">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="logo">
+                        <a class="navbar-brand" href="{% url 'Main:index' %}"><img src="{% static 'main/img/logo/logo.png' %}" alt="logo"></a>
+                    </div>
+                </div>
+                <div class="col-md-10">
+                    <div class="navigation">
+                        <ul class="list-inline text-right" id="mainmenu">
+                            <li><a href="{% url 'Main:index' %}">Home</a></li>
+                            <li><a href="{% url 'Post:addnew' %}">Posts</a></li>
+                            <li><a href="http://themes.dhrubok.website/spark-whmcs/">Other Stuff</a></li>
+                            {% if user.is_authenticated %}  
+                            <li><a href="{% url 'Post:addnew' %}">Add Post</a></li>
+                            <li><a href="{% url 'Post:index' %}">Log Out</a></li>
+                            {% else %}
+                            <li><a href="{% url 'login' %}">Log In</a></li>
+                            <li><a href="{% url 'users:register' %}">Sign Up</a></li>
+                            {% endif %}
+                            
+                            <!-- <li><a href="contact.html">Contact</a></li>
+                            <li class="shop-plan dropdown"><a href="index.html"><img class="bag-icon" src="{% static 'main/img/icons/bag.png' %}" alt="bag-icon"></a>
+                                <div class="shop-plan-chart dropdown-nav">
+                                    <div class="single-shop-plan">
+                                        <img class="shop-icon" src="{% static 'main/img/shop/shop-icon.png' %}" alt="shop-icon">
+                                        <span class="shop-items">1x $12.99</span>
+                                        <button><span  class="ti-close" aria-hidden="true"></span></button>
+                                    </div>
+                                    <div class="single-shop-plan">
+                                        <img class="shop-icon" src="{% static 'main/img/shop/shop-icon2.png' %}" alt="shop-icon">
+                                        <span class="shop-items">1x $12.99</span>
+                                        <button><span  class="ti-close" aria-hidden="true"></span></button>
+                                    </div>
+                                    <div class="single-shop-plan">
+                                        <img class="shop-icon" src="{% static 'main/img/shop/shop-icon3.png' %}" alt="shop-icon">
+                                        <span class="shop-items">1x $12.99</span>
+                                        <button><span  class="ti-close" aria-hidden="true"></span></button>
+                                    </div>
+                                    <hr>
+                                    <div class="shop-total">
+                                        <h3>subtotal <span>1x $12.99</span></h3>
+                                    </div>
+                                    <a class="pricing-btn blue-btn homepage-one-all-features-btn action-btn slider-links-2 chart-btn" href="cart.html">View Cart</a>
+                                </div>
+                            </li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /MOBILE NAVIGATION -->
+    <!-- /NAVIGATION -->
+
+
+    <!-- HOMEPAGE-1 SLIDER -->
+    <section class="slider-2-bg ">
+
+        <div class="clouds">
+            <img src="{% static 'main/img/cloud/cloud-6.png' %}" alt="cloud" class="cloud1">
+            <img src="{% static 'main/img/cloud/cloud-2.png' %}" alt="cloud" class="cloud3">
+            <img src="{% static 'main/img/cloud/cloud-3.png' %}" alt="cloud" class="cloud4">
+            <img src="{% static 'main/img/cloud/cloud-4.png' %}" alt="cloud" class="cloud5">
+            <img src="{% static 'main/img/cloud/cloud-5.png' %}" alt="cloud" class="cloud2">
+            <img src="{% static 'main/img/cloud/cloud-6.png' %}" alt="cloud" class="cloud6">
+            <img src="{% static 'main/img/cloud/cloud-7.png' %}" alt="cloud" class="cloud7">
+            <img src="{% static 'main/img/cloud/cloud-5.png' %}" alt="cloud" class="cloud8">
+        </div>
+
+        <div class="single-slider-item">
+            <div class="container">
+                <div class="row ">
+                    <div class="slider-content-area-table">
+                        <div class="slider-content-area-table-cell">
+                            <div class="col-md-12 col-sm-12 wow slideInLeft " data-wow-duration="2s" data-wow-delay="0.4s">
+                                <div class="slider-content">
+                                    <h2>
+                                        {% block content %}
+                                        {% endblock %}
+                                    </h2>
+                                    <div class="slider-links">
+                                        <a class="pricing-btn blue-btn homepage-two-all-features-btn action-btn slider-links-1" href="#">GET START NOW</a>
+                                        <a class="pricing-btn blue-btn homepage-two-all-features-btn action-btn slider-links-2" href="#">SEE PRICING</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section class="homepage-2 domain-area ">
+        <div class="container domain-inner">
+            <div class="row domain-checkup">
+                <form id="digita-contact-form" action="{% static 'main/php/contact-mail.php" method="POST">
+                    <div class="domain-checkup-left">
+                        <div class="input-field-row">
+                            <input type="text" class="domain-input" placeholder="Enter your domain here">
+                            <!-- <select class="nice-select" name="option">
+                                <option value="">.com</option>
+                                <option value="">.net</option>
+                                <option value="">.net</option>
+                                <option value="">.net</option>
+                                <option value="">.net</option>
+                            </select> -->
+                        </div>
+                    </div>
+                    <div class="domain-checkup-right">
+                        <button>
+                            <img src="{% static 'main/img/icons/search-icon.png' %}" alt="Search icon">
+                            Search
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    
+    <!-- BLOG-1 -->
+    <section class="homepage-2 blog-1-area wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.2s">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title ">
+                        <h2>Why Choose <span>Flake?</span> </h2>
+                        <img src="{% static 'main/img/section-shape.png' %}" alt="section-shape">
+                        <p>Lorem ipsum dolor sittem ametam ngcing elit, per sed do eiusmoad teimpor sittemelit inuning ut sed sittem do eiusmod.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-4 ">
+                    <div class="single-blog-1">
+                        <img src="{% static 'main/img/service/section-icon.png' %}" alt="section-icon">
+                        <h2>Free Domain</h2>
+                        <p>Lorem ipsum dolor sittem ametam ngcing elit, per sed do eiusmoad teimpor inunt ut segad do eiusmod.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 ">
+                    <div class="single-blog-1">
+                        <img src="{% static 'main/img/service/section-icon-2.png' %}" alt="section-icon">
+                        <h2>Control Cpanel</h2>
+                        <p>Lorem ipsum dolor sittem ametam ngcing elit, per sed do eiusmoad teimpor inunt ut segad do eiusmod.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 ">
+                    <div class="single-blog-1">
+                        <img src="{% static 'main/img/service/section-icon-3.png' %}" alt="section-icon">
+                        <h2>24/7 Hour Support</h2>
+                        <p>Lorem ipsum dolor sittem ametam ngcing elit, per sed do eiusmoad teimpor inunt ut segad do eiusmod.</p>
+                    </div>
+                </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-4 ">
+                    <div class="single-blog-1">
+                        <img src="{% static 'main/img/service/section-icon.png' %}" alt="section-icon">
+                        <h2>Domain Service</h2>
+                        <p>Lorem ipsum dolor sittem ametam ngcing elit, per sed do eiusmoad teimpor inunt ut sedig do eiusmod.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 ">
+                    <div class="single-blog-1">
+                        <img src="{% static 'main/img/service/section-icon-2.png' %}" alt="section-icon">
+                        <h2>VPS Hosting</h2>
+                        <p>Lorem ipsum dolor sittem ametam ngcing elit, per sed do eiusmoad teimpor inunt ut sedig do eiusmod.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 ">
+                    <div class="single-blog-1">
+                        <img src="{% static 'main/img/service/section-icon-3.png' %}" alt="section-icon">
+                        <h2>Shared Hosting</h2>
+                        <p>Lorem ipsum dolor sittem ametam ngcing elit, per sed do eiusmoad teimpor inunt ut sedig do eiusmod.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- BLOG-1  END-->
+
+
+    <!--FUN FACT AREA AREA-->
+
+    <section class="homepage-2 fan-fact-area fan-fact-area-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-3 ">
+                    <div class="single-items">
+                        <h2><span class="counter">1350</span>+</h2>
+                        <img src="{% static 'main/img/fun-fact/fan-fact-1.png' %}" alt="fan-fact">
+                        <h4>Registared Domains</h4>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3 ">
+                    <div class="single-items">
+                        <h2><span class="counter">950</span>+</h2>
+                        <img src="{% static 'main/img/fun-fact/fan-fact-2.png' %}" alt="fan-fact">
+                        <h4>Sites Hosted</h4>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3 ">
+                    <div class="single-items">
+                        <h2><span class="counter">1080</span>+</h2>
+                        <img src="{% static 'main/img/fun-fact/fan-fact-3.png' %}" alt="fan-fact">
+                        <h4>Happy Clients</h4>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3 ">
+                    <div class="single-items">
+                        <h2><span class="counter">226</span>+</h2>
+                        <img src="{% static 'main/img/fun-fact/fan-fact-4.png' %}" alt="fan-fact">
+                        <h4>Awards Won</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--FUN FACT AREA AREA END-->
+    <!--TAB AREA-->
+    <section class="tab-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h2> <span>Flake’s</span> Give you Full Setisfaction</h2>
+                        <img src="{% static 'main/img/section-shape.png' %}" alt="section-shape">
+                        <p>Lorem ipsum dolor sittem ametamngcing elit, per sed do eiusmoad teimpor sittemelit inuning ut sed sittem do eiusmod.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="tabs animated-slide-2  ">
+                        <ul class="tab-links">
+                            <li><a href="#tab1">%99 Uptime</a></li>
+                            <li class="active"><a href="#tab2">Easy Control</a></li>
+                            <li><a href="#tab3">Email Marketing</a></li>
+                            <li><a href="#tab4">24/7 Support</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id="tab1" class="tab ">
+                                <div class="row">
+                                    <div class="col-md-7">
+                                        <h2>%99 Uptime</h2>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor an trud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla patur. Excepteur sint occaecat cupidatat non proident.</p>
+                                        <div class="tab-content-list">
+                                            <ul>
+                                                <li>Lorem ipsum dolor sit amet, consectetur</li>
+                                                <li>Lorem ipsum dolor sit ametate</li>
+                                                <li>Dolor sit amet, consectetur adipisicing elit</li>
+                                                <li>Consectetur adipisicing elit, sed do eiusmod tempor</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="icon-right">
+                                        <img src="{% static 'main/img/tab/tab-icons-1.png' %}" alt="tab-icons">
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="tab2" class="tab active">
+                                <div class="row">
+                                    <div class="col-md-7">
+                                        <h2>Easy Cpanel Control</h2>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor an trud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla patur. Excepteur sint occaecat cupidatat non proident.</p>
+                                        <div class="tab-content-list">
+                                            <ul>
+                                                <li>Lorem ipsum dolor sit amet, consectetur</li>
+                                                <li>Lorem ipsum dolor sit ametate</li>
+                                                <li>Dolor sit amet, consectetur adipisicing elit</li>
+                                                <li>Consectetur adipisicing elit, sed do eiusmod tempor</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="icon-right">
+                                        <img src="{% static 'main/img/tab/tab-icons-2.png' %}" alt="tab-icons">
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="tab3" class="tab">
+                                <div class="row">
+                                    <div class="col-md-7">
+                                        <h2>Email Marketing</h2>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor an trud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla patur. Excepteur sint occaecat cupidatat non proident.</p>
+                                        <div class="tab-content-list">
+                                            <ul>
+                                                <li>Lorem ipsum dolor sit amet, consectetur</li>
+                                                <li>Lorem ipsum dolor sit ametate</li>
+                                                <li>Dolor sit amet, consectetur adipisicing elit</li>
+                                                <li>Consectetur adipisicing elit, sed do eiusmod tempor</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="icon-right">
+                                        <img src="{% static 'main/img/tab/tab-icons-3.png' %}" alt="tab-icons">
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="tab4" class="tab">
+                                <div class="row">
+                                    <div class="col-md-7">
+                                        <h2>24/7 Support</h2>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor an trud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla patur. Excepteur sint occaecat cupidatat non proident.</p>
+                                        <div class="tab-content-list">
+                                            <ul>
+                                                <li>Lorem ipsum dolor sit amet, consectetur</li>
+                                                <li>Lorem ipsum dolor sit ametate</li>
+                                                <li>Dolor sit amet, consectetur adipisicing elit</li>
+                                                <li>Consectetur adipisicing elit, sed do eiusmod tempor</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="icon-right">
+                                        <img src="{% static 'main/img/tab/tab-icons-4.png' %}" alt="tab-icons">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--TAB AREA END-->
+
+
+
+    <!--CTA AREA -->
+
+    <section class="call-to-action-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-8 col-xs-12 ">
+                    <div class="call-to-action-area-content">
+                        <span>2500+ People trust Flake</span>
+                        <h2>Get to start Flake right now ?</h2>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-12 ">
+                    <div class="call-to-action-btn">
+                        <a class="pricing-btn blue-btn homepage-one-all-features-btn action-btn" href="#">Get Start Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--CTA AREA  END-->
+
+
+
+    <!--FOOTER AREA -->
+
+    <section class="footer-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-3 ">
+                    <div class="footer-single-item">
+                        <div class="logo">
+                            <a href="index.html"><img src="{% static 'main/img/logo/logo.png' %}" alt="logo"></a>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consec tetura adipisicing elit, sed temporia incididunt.</p>
+                        <p class="contact-info"><span class="ti-headphone-alt"></span><a href="tel:+08801711991383">+0044 545 989 626</a></p>
+                        <p class="contact-info"><span class=" ti-email"></span><a href="mailto:hasan.nazmulmmc@gamil.com">www.yourwebsite.com</a> </p>
+                        <p class="contact-info"><span class="ti-location-pin"></span><a href="#">28 Green Tower, Street Name,<br>New York City, USA</a></p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3 ">
+                    <div class="single-footer margin-left">
+                        <h2>About</h2>
+                        <div class="footer-links">
+                            <ul>
+                                <li><a href="index.html">Home Page</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="#">WHMCS</a></li>
+                                <li><a href="domain.html">Search Domain</a></li>
+                                <li><a href="#">My Account</a></li>
+                                <li><a href="#">Support Center</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3 ">
+                    <div class="single-footer">
+                        <h2>Services</h2>
+                        <div class="footer-links">
+                            <ul>
+                                <li><a href="hosting.html">Web Hosting</a></li>
+                                <li><a href="#">Reseller Hosting</a></li>
+                                <li><a href="vps-hosting.html">VPS Hosting</a></li>
+                                <li><a href="hosting.html">Web Hosting</a></li>
+                                <li><a href="#">Email Mrketing</a></li>
+                                <li><a href="vps-hosting.html">VPS Hosting</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3 ">
+                    <div class="single-footer">
+                        <h2>Newsletter</h2>
+                        <form action="http://hackinout.us15.list-manage.com/subscribe/post-json?u=e44c1f194bec93e238615469e&amp;id=fa63cb4ac7&c=?" method="get" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate">
+                            <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Type our mail address" required>
+                            <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                                <input type="text" name="b_e44c1f194bec93e238615469e_f6f826e769" tabindex="-1" value="">
+                            </div>
+                            <input type="submit" value="subscribe" name="subscribe" id="mc-embedded-subscribe" class="mc-button">
+                            <div id="subscribe-result">
+                            </div>
+                        </form>
+                        <div class="social-links">
+                            <a href="#" target="_blank"><span class="ti-facebook"></span></a>
+                            <a href="#" target="_blank"><span class="ti-twitter-alt"></span></a>
+                            <a href="#" target="_blank"><span class="ti-vimeo-alt"></span></a>
+                            <a href="#" target="_blank"><span class="ti-pinterest"></span></a>
+                            <a href="#" target="_blank"><span class="ti-google"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--FOOTER AREA  END-->
+
+
+
+    <!--FOOTER-BOTTOM-AREA -->
+
+    <section class="foter-botom-area ">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12 ">
+                    <p>Copyright &copy; 2020<a href="http://google.com/">_____</a>all right reserved.</p>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12 ">
+                    <div class="payment-getway text-right">
+                        <img src="{% static 'main/img/bg/footer-bottom.png' %}" alt="payment">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--FOOTER-BOTTOM-AREA -->
+    <script src="{% static 'main/js/jquery.min.js' %}"></script>
+    <script src="{% static 'main/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'main/js/plugins.js' %}"></script>
+    <script src="{% static 'main/js/ajax-mail.js' %}"></script>
+    <script src="{% static 'main/js/ajax-subscribe.js' %}"></script>
+    <script src="{% static 'main/js/main.js' %}"></script>
+</body>
+
+</html>
