@@ -25,7 +25,7 @@ SECRET_KEY = 'h1!9u0grw!0z4e$=%z4-h+em98!#ocl-xajm*7@oo&ye_%1zsx'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['itsphila.pythonanywhere.com']
 
 
 # Application definition
@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'post.apps.PostConfig',
     'users',
     'main.apps.MainConfig',
-    'clear_cache',
+
 ]
 
 MIDDLEWARE = [
@@ -122,7 +122,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
-MEDIA_ROOT =  os.path.join(BASE_DIR, 'media') 
+STATIC_ROOT = '/home/itsphila/project/static'
+MEDIA_ROOT =  os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 CRISPY_TEMPLATE_PACK='bootstrap3'
 LOGIN_REDIRECT_URL = 'main:index'

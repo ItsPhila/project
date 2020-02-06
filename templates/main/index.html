@@ -52,7 +52,7 @@
                             <li><a href="http://themes.dhrubok.website/spark-whmcs/">Other Stuff</a></li>
                             {% if user.is_authenticated %}  
                             <li><a href="{% url 'Post:addnew' %}">Add Post</a></li>
-                            <li><a href="{% url 'Post:index' %}">Log Out</a></li>
+                            <li><a href="{% url 'logout' %}">Log Out</a></li>
                             {% else %}
                             <li><a href="{% url 'login' %}">Log In</a></li>
                             <li><a href="{% url 'users:register' %}">Sign Up</a></li>
