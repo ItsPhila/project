@@ -1,17 +1,23 @@
 {% extends 'main/base.html' %}
 
-{% block  content %}
+{% load bootstrap4 %}
+{% load i18n %}
 
+{% block content %}
 
-  <form method = "POST"> 
-      {% csrf_token %}
-      {{ form }}
+    <h4>{% trans 'Create an account' %}</h4>
 
-      <input type= "submit" value="Sign Up">
+    <form method="post">
 
-      </form>
+        {% csrf_token %}
+        {% bootstrap_form form %}
 
-{% endblock  %}
+        <button class="btn btn-success">{% trans 'Create' %}</button>
+
+    </form>
+
+{% endblock %}
+
 
       
       
