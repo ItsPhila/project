@@ -65,160 +65,79 @@
     <!-- /MOBILE NAVIGATION -->
     <!-- /NAVIGATION -->
 
-
-    <!-- HOMEPAGE-1 SLIDER -->
-    <section class="slider-2-bg ">
-
-        <div class="clouds">
-            <img src="{% static 'main/img/cloud/cloud-6.png' %}" alt="cloud" class="cloud1">
-            <img src="{% static 'main/img/cloud/cloud-2.png' %}" alt="cloud" class="cloud3">
-            <img src="{% static 'main/img/cloud/cloud-3.png' %}" alt="cloud" class="cloud4">
-            <img src="{% static 'main/img/cloud/cloud-4.png' %}" alt="cloud" class="cloud5">
-            <img src="{% static 'main/img/cloud/cloud-5.png' %}" alt="cloud" class="cloud2">
-            <img src="{% static 'main/img/cloud/cloud-6.png' %}" alt="cloud" class="cloud6">
-            <img src="{% static 'main/img/cloud/cloud-7.png' %}" alt="cloud" class="cloud7">
-            <img src="{% static 'main/img/cloud/cloud-5.png' %}" alt="cloud" class="cloud8">
-        </div>
-
-        <div class="single-slider-item">
+    {% block content %}
+    {% endblock %}
+<!--FOOTER AREA-->
+<section class="footer-area">
             <div class="container">
-                <div class="row ">
-                    <div class="slider-content-area-table">
-                        <div class="slider-content-area-table-cell">
-                            <div class="col-md-12 col-sm-12 wow slideInLeft " data-wow-duration="2s" data-wow-delay="0.4s">
-                                <div class="slider-content">
-                                    <h2>
-                                        {% block content %}
-                                        {% endblock %}
-                                    </h2>
-                                    <div class="slider-links">
-                                        <a class="pricing-btn blue-btn homepage-two-all-features-btn action-btn slider-links-1" href="#">GET START NOW</a>
-                                        <a class="pricing-btn blue-btn homepage-two-all-features-btn action-btn slider-links-2" href="#">SEE PRICING</a>
-                                    </div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-3 ">
+                        <div class="footer-single-item">
+                            <div class="logo">
+                                <a href="index.html"><img src="{% static 'main/img/logo/logo.png' %}" alt="logo"></a>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consec tetura adipisicing elit, sed temporia incididunt.</p>
+                            <p class="contact-info"><span class="ti-headphone-alt"></span><a href="tel:+08801711991383">+0044 545 989 626</a></p>
+                            <p class="contact-info"><span class=" ti-email"></span><a href="mailto:hasan.nazmulmmc@gamil.com">www.yourwebsite.com</a> </p>
+                            <p class="contact-info"><span class="ti-location-pin"></span><a href="#">28 Green Tower, Street Name,<br>New York City, USA</a></p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-3 ">
+                        <div class="single-footer margin-left">
+                            <h2>About</h2>
+                            <div class="footer-links">
+                                <ul>
+                                    <li><a href="index.html">Home Page</a></li>
+                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="#">WHMCS</a></li>
+                                    <li><a href="domain.html">Search Domain</a></li>
+                                    <li><a href="#">My Account</a></li>
+                                    <li><a href="#">Support Center</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-3 ">
+                        <div class="single-footer">
+                            <h2>Services</h2>
+                            <div class="footer-links">
+                                <ul>
+                                    <li><a href="hosting.html">Web Hosting</a></li>
+                                    <li><a href="#">Reseller Hosting</a></li>
+                                    <li><a href="vps-hosting.html">VPS Hosting</a></li>
+                                    <li><a href="hosting.html">Web Hosting</a></li>
+                                    <li><a href="#">Email Mrketing</a></li>
+                                    <li><a href="vps-hosting.html">VPS Hosting</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-3 ">
+                        <div class="single-footer">
+                            <h2>Newsletter</h2>
+                            <form action="http://hackinout.us15.list-manage.com/subscribe/post-json?u=e44c1f194bec93e238615469e&amp;id=fa63cb4ac7&c=?" method="get" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate">
+                                <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Type our mail address" required>
+                                <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                                    <input type="text" name="b_e44c1f194bec93e238615469e_f6f826e769" tabindex="-1" value="">
                                 </div>
+                                <input type="submit" value="subscribe" name="subscribe" id="mc-embedded-subscribe" class="mc-button">
+                                <div id="subscribe-result">
+                                </div>
+                            </form>
+                            <div class="social-links">
+                                <a href="#" target="_blank"><span class="ti-facebook"></span></a>
+<a href="#" target="_blank"><span class="ti-twitter-alt"></span></a>
+                                <a href="#" target="_blank"><span class="ti-vimeo-alt"></span></a>
+                                <a href="#" target="_blank"><span class="ti-pinterest"></span></a>
+                                <a href="#" target="_blank"><span class="ti-google"></span></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-    </section>
-
-
-    <section class="homepage-2 domain-area ">
-        <div class="container domain-inner">
-            <div class="row domain-checkup">
-                <form id="digita-contact-form" action="{% static 'main/php/contact-mail.php" method="POST">
-                    <div class="domain-checkup-left">
-                        <div class="input-field-row">
-                            <input type="text" class="domain-input" placeholder="Search here">
-
-                        </div>
-                    </div>
-                    <div class="domain-checkup-right">
-                        <button>
-                            <img src="{% static 'main/img/icons/search-icon.png' %}" alt="Search icon">
-                            Search
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </section>
-
-
+        </section>
+        <!--FOOTER AREA  END-->
     
-    <!-- BLOG-1 -->
-    <section class="homepage-2 blog-1-area wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.2s">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="section-title ">
-                        <h2>Why Choose <span>Flake?</span> </h2>
-                        <img src="{% static 'main/img/section-shape.png' %}" alt="section-shape">
-                        <p>Lorem ipsum dolor sittem ametam ngcing elit, per sed do eiusmoad teimpor sittemelit inuning ut sed sittem do eiusmod.</p>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </div>
-    </section>
-    <!-- BLOG-1  END-->
-
-
-    <!--FOOTER AREA -->
-
-    <section class="footer-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 col-sm-3 ">
-                    <div class="footer-single-item">
-                        <div class="logo">
-                            <a href="index.html"><img src="{% static 'main/img/logo/logo.png' %}" alt="logo"></a>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet, consec tetura adipisicing elit, sed temporia incididunt.</p>
-                        <p class="contact-info"><span class="ti-headphone-alt"></span><a href="tel:+08801711991383">+0044 545 989 626</a></p>
-                        <p class="contact-info"><span class=" ti-email"></span><a href="mailto:hasan.nazmulmmc@gamil.com">www.yourwebsite.com</a> </p>
-                        <p class="contact-info"><span class="ti-location-pin"></span><a href="#">28 Green Tower, Street Name,<br>New York City, USA</a></p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-3 ">
-                    <div class="single-footer margin-left">
-                        <h2>About</h2>
-                        <div class="footer-links">
-                            <ul>
-                                <li><a href="index.html">Home Page</a></li>
-                                <li><a href="about.html">About Us</a></li>
-                                <li><a href="#">WHMCS</a></li>
-                                <li><a href="domain.html">Search Domain</a></li>
-                                <li><a href="#">My Account</a></li>
-                                <li><a href="#">Support Center</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-3 ">
-                    <div class="single-footer">
-                        <h2>Services</h2>
-                        <div class="footer-links">
-                            <ul>
-                                <li><a href="hosting.html">Web Hosting</a></li>
-                                <li><a href="#">Reseller Hosting</a></li>
-                                <li><a href="vps-hosting.html">VPS Hosting</a></li>
-                                <li><a href="hosting.html">Web Hosting</a></li>
-                                <li><a href="#">Email Mrketing</a></li>
-                                <li><a href="vps-hosting.html">VPS Hosting</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-3 ">
-                    <div class="single-footer">
-                        <h2>Newsletter</h2>
-                        <form action="http://hackinout.us15.list-manage.com/subscribe/post-json?u=e44c1f194bec93e238615469e&amp;id=fa63cb4ac7&c=?" method="get" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate">
-                            <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Type our mail address" required>
-                            <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                                <input type="text" name="b_e44c1f194bec93e238615469e_f6f826e769" tabindex="-1" value="">
-                            </div>
-                            <input type="submit" value="subscribe" name="subscribe" id="mc-embedded-subscribe" class="mc-button">
-                            <div id="subscribe-result">
-                            </div>
-                        </form>
-                        <div class="social-links">
-                            <a href="#" target="_blank"><span class="ti-facebook"></span></a>
-                            <a href="#" target="_blank"><span class="ti-twitter-alt"></span></a>
-                            <a href="#" target="_blank"><span class="ti-vimeo-alt"></span></a>
-                            <a href="#" target="_blank"><span class="ti-pinterest"></span></a>
-                            <a href="#" target="_blank"><span class="ti-google"></span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--FOOTER AREA  END-->
-
 
 
     <!--FOOTER-BOTTOM-AREA -->
