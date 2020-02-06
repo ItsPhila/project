@@ -46,7 +46,7 @@
                     <div class="navigation">
                         <ul class="list-inline text-right" id="mainmenu">
                             <li><a href="{% url 'Main:index' %}">Home</a></li>
-                            <li><a href="{% url 'Post:addnew' %}">Posts</a></li>
+                            <li><a href="{% url 'Post:index' %}">Posts</a></li>
                             <li><a href="http://themes.dhrubok.website/spark-whmcs/">Other Stuff</a></li>
                             {% if user.is_authenticated %}  
                             <li><a href="{% url 'Post:addnew' %}">Add Post</a></li>
