@@ -1444,13 +1444,13 @@ a.pricing-btn.blue-btn.homepage-one-all-features-btn.action-btn.slider-links-2 {
     border: none;
     color: #fff;
     font-size: 18px;
-    background: #3CEEDB;
+    background: rgb(19, 150, 52);
     outline: none;
     -webkit-transition: .3s;
     transition: .3s;
 }
 .domain-checkup-right button:hover {
-    background: #35e8d6;
+    background: #35e862;
 }
 
 .domain-checkup-right img {
@@ -1529,7 +1529,7 @@ a.pricing-btn.blue-btn.homepage-one-all-features-btn.action-btn.slider-links-2 {
     color: #fff;
 }
 .homepage-2 .domain-checkup {
-    background:rgb(31, 173, 255);
+    background:rgb(22, 194, 88);
 ;
 }
 /*----------------------------------------

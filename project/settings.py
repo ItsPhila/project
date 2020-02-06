@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'post.apps.PostConfig',
     'users',
     'main.apps.MainConfig',
-    'crispy_forms',
+    'clear_cache',
 ]
 
 MIDDLEWARE = [
