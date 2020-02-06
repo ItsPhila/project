@@ -1,0 +1,45 @@
+{% extends 'main/base.html' %}
+{% load crispy_forms_tags %}
+{% block  content %} 
+ <!-- REGISTER AREA -->
+    <section class=""></section>
+      <!-- <div class="container">
+          <div class="row">
+              <div class="col-md-12">
+                  <div class="about-content-table">
+                      <div class="about-content-table-sell">
+                          <div class="about-heading"> -->
+                            <div style="text-align: center; margin-bottom: 3%; margin-top: 3%; " class="container">
+                                <h2>Register</h2>
+                            </div>
+                          <form method = "POST" id=".domain-checkup" class="form-input" style="max-width: 20%; margin-left: 40%; margin-bottom: 5%;" > 
+
+                              {% csrf_token %}
+                            {{ form|crispy }}
+                      
+                            <input type= "submit" value="Login "  class="btn btn-primary" style="margin-left:-3.5%;">
+                      
+                      
+                            </form> 
+                            <div class="about-links">
+                                  <ul>
+                                      <li></li>
+                                      <li></li>
+                                  </ul>
+                              </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- LOGIN AREA END -->
+  {% endblock %}
+      
+      
+      
+      
+    
+       
+      

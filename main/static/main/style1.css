@@ -2222,7 +2222,7 @@ section.brand-area {
        FOOTER AREA STYLE
 ------------------------------------------*/
 section.footer-area {
-    padding: 120px 0;
+    padding: 50px 0 10px 0;
     background-image: url(img/bg/footer-bg.jpg);
     background-size: cover;
     background-position: center;

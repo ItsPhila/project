@@ -1,5 +1,3 @@
-{% load static %}
-
 <!DOCTYPE html>
 {% load static %}
 <html lang="zxx">
@@ -48,7 +46,7 @@
                     <div class="navigation">
                         <ul class="list-inline text-right" id="mainmenu">
                             <li><a href="{% url 'Main:index' %}">Home</a></li>
-                            <li><a href="{% url 'Post:addnew' %}">Posts</a></li>
+                            <li><a href="{% url 'Post:index' %}">Posts</a></li>
                             <li><a href="http://themes.dhrubok.website/spark-whmcs/">Other Stuff</a></li>
                             {% if user.is_authenticated %}  
                             <li><a href="{% url 'Post:addnew' %}">Add Post</a></li>
@@ -89,10 +87,15 @@
                         <div class="slider-content-area-table-cell">
                             <div class="col-md-12 col-sm-12 wow slideInLeft " data-wow-duration="2s" data-wow-delay="0.4s">
                                 <div class="slider-content">
-                                    <h2>
-                                    WELCOME!
+                                    {% if user.is_authenticated %}
+                                    <h2 style="text-transform: capitalize;">
+                                    WELCOME {{request.user.username}}!
                                     </h2>
-                                
+                                    {% else %}
+                                    <h2>
+                                        WELCOME!
+                                    </h2>
+                                    {% endif %}
                                 </div>
                             </div>
                         </div>

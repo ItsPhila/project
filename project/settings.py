@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'users',
     'main.apps.MainConfig',
     'clear_cache',
+    'crispy_forms',
 
 ]
 
@@ -126,6 +127,6 @@ STATIC_URL = '/static/'
 STATIC_ROOT = '/home/itsphila/project/static'
 MEDIA_ROOT =  os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
-CRISPY_TEMPLATE_PACK='bootstrap3'
+CRISPY_TEMPLATE_PACK='bootstrap4'
 LOGIN_REDIRECT_URL = 'main:index'
 LOGOUT_REDIRECT_URL = 'main:index'

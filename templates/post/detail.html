@@ -1,0 +1,26 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block  content %}
+
+   <!-- BLOG-1 -->
+<section class="homepage-2 blog-1-area wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.2s">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-title ">
+                    <div class="container" style="word-wrap: break-word;">
+                        <h2> {{single_post.title}} </h2>
+                        <h6> {{single_post.pubdate}} </h6>
+                        <img src="{% static 'main/img/section-shape.png' %}" alt="section-shape">
+                        <p style="text-align: justify;"> {{single_post.text}} </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</section>
+<!-- BLOG-1  END--> 
+
+{% endblock %}
+    
