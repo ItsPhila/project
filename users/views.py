@@ -6,7 +6,7 @@ def register(request):
         form = SignUpFrom(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('main:index')
+            return redirect('main:addnew.html')
 
     else:
         form = SignUpFrom()

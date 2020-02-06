@@ -721,8 +721,8 @@ a.pricing-btn.blue-btn.homepage-one-all-features-btn.action-btn.slider-links-2 {
     width: 100%;
 }
 .slider-2-bg .single-slider-item {
-    padding-top: 240px;
-    padding-bottom: 460px;
+    padding-top: 140px;
+    padding-bottom: 140px;
     z-index: 999;
     position: relative;
 }
@@ -1431,7 +1431,7 @@ a.pricing-btn.blue-btn.homepage-one-all-features-btn.action-btn.slider-links-2 {
     border: none;
     color: #fff;
     font-size: 18px;
-    background: #5DAFEF;
+    /* background: #5DAFEF; */
     outline: none;
     -webkit-transition: .3s;
     transition: .3s;
@@ -1518,7 +1518,7 @@ a.pricing-btn.blue-btn.homepage-one-all-features-btn.action-btn.slider-links-2 {
 .homepage-2.domain-area {
     position: relative;
     z-index: 1;
-    top: -412px;
+    top: -212px;
 }
 .homepage-2.domain-area .domain-inner {
     border-radius: 5px;
@@ -1529,7 +1529,8 @@ a.pricing-btn.blue-btn.homepage-one-all-features-btn.action-btn.slider-links-2 {
     color: #fff;
 }
 .homepage-2 .domain-checkup {
-    background: #622F8E;
+    background:rgb(31, 173, 255);
+;
 }
 /*----------------------------------------
             SECTION-TITLE STYLE
@@ -1564,11 +1565,11 @@ a.pricing-btn.blue-btn.homepage-one-all-features-btn.action-btn.slider-links-2 {
              BLOG-1 STYLE
 ------------------------------------------*/
 section.blog-1-area {
-    padding-bottom: 105px;
+    /* padding-bottom: 105px; */
 }
 .homepage-2.blog-1-area {
-    padding-bottom: 105px;
-    margin-top: -224px;
+    /* padding-bottom: 105px; */
+    margin-top: -124px;
 }
 .single-blog-1 {
     text-align: center;
