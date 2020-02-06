@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'post.apps.PostConfig',
     'users',
     'main.apps.MainConfig',
+    'clear_cache',
 
 ]
 
