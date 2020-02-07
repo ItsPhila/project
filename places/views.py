@@ -33,10 +33,10 @@ def detail(request,place_id):
     context = {"single_place" : single_place,}
     return render(request,'places/detail.html',context)
 
-class PlaceCreateView(CreateView):
-    model = Places
-    fields = (
-        'title',
-        'myimage',
-        'location',
-    )
+# class PlaceCreateView(CreateView):
+#     model = Places
+#     fields = (
+#         'title',
+#         'myimage',
+#         'location',
+#     )
