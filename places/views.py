@@ -28,3 +28,15 @@ def addplace(request):
     context = {"form":form}
     return render(request,'places/addplace.html',context)
 
+def detail(request,place_id):
+    single_place = Places.objects.get(id=place_id)
+    context = {"single_place" : single_place,}
+    return render(request,'places/detail.html',context)
+
+class PlaceCreateView(CreateView):
+    model = Places
+    fields = (
+        'title',
+        'myimage',
+        'location',
+    )
