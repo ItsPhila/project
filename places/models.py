@@ -7,6 +7,7 @@ class Places(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE,null=True)
     title = models.CharField(max_length=50)
     pubdate = models.DateTimeField(default = timezone.now())
+    myimage = models.ImageField(upload_to='images/', null=True)
 
 
     def pre(self):
