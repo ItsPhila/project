@@ -31,7 +31,6 @@
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
       <![endif]-->
      <!-- HEADER TOP -->
- 
 
     <!-- NAVIGATION -->
     <div class="navigation-bar stick">
@@ -46,11 +45,12 @@
                     <div class="navigation">
                         <ul class="list-inline text-right" id="mainmenu">
                             <li><a href="{% url 'Main:index' %}">Home</a></li>
-                            <li><a href="{% url 'Post:index' %}">Posts</a></li>
-                            <li><a href="http://themes.dhrubok.website/spark-whmcs/">Other Stuff</a></li>
-                            {% if user.is_authenticated %}  
-                            <li><a href="{% url 'Post:addnew' %}">Add Post</a></li>
-                            <li><a href="{% url 'Post:index' %}">Log Out</a></li>
+                            <li><a href="{% url 'Post:index' %}">News</a></li>
+                            <li><a href="{% url 'Place:index' %}">Places</a></li>
+                            {% if user.is_authenticated %} 
+                            <li><a href="{% url 'Place:addplace' %}">Add Places</a></li>
+                            <li><a href="{% url 'Post:addnew' %}">Add News</a></li>
+                            <li><a href="{% url 'logout' %}">Log Out</a></li>
                             {% else %}
                             <li><a href="{% url 'login' %}">Log In</a></li>
                             <li><a href="{% url 'users:register' %}">Sign Up</a></li>
@@ -65,6 +65,9 @@
     
     <!-- /MOBILE NAVIGATION -->
     <!-- /NAVIGATION -->
+    {% block header %}
+
+    {% endblock %}
 
 
         {% block content %}
@@ -80,12 +83,12 @@
                     <div class="col-md-3 col-sm-3 ">
                         <div class="footer-single-item">
                             <div class="logo">
-                                <a href="index.html"><img src="{% static 'main/img/logo/logo.png' %}" alt="logo"></a>
+                                <a href="{% static 'index.html' %}"><img src="{% static 'main/img/logo/logo.png' %}" alt="logo"></a>
                             </div>
-                            <p>Lorem ipsum dolor sit amet, consec tetura adipisicing elit, sed temporia incididunt.</p>
-                            <p class="contact-info"><span class="ti-headphone-alt"></span><a href="tel:+08801711991383">+0044 545 989 626</a></p>
-                            <p class="contact-info"><span class=" ti-email"></span><a href="mailto:hasan.nazmulmmc@gamil.com">www.yourwebsite.com</a> </p>
-                            <p class="contact-info"><span class="ti-location-pin"></span><a href="#">28 Green Tower, Street Name,<br>New York City, USA</a></p>
+                            <p>Plant Trees, Save the Environment, Save the future!</p>
+                            <p class="contact-info"><span class="ti-headphone-alt"></span><a href="tel:+25912345678">+25912345678</a></p>
+                            <p class="contact-info"><span class=" ti-email"></span><a href="mailto:hasan.nazmulmmc@gamil.com">www.medemer.com</a> </p>
+                            <p class="contact-info"><span class="ti-location-pin"></span><a href="#">AAiT 5 Kilo <br>Addis Abeba, Ethiopia</a></p>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-3 ">
@@ -121,12 +124,10 @@
                     <div class="col-md-3 col-sm-3 ">
                         <div class="single-footer">
                             <h2>Newsletter</h2>
-                            <form action="http://hackinout.us15.list-manage.com/subscribe/post-json?u=e44c1f194bec93e238615469e&amp;id=fa63cb4ac7&c=?" method="get" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate">
-                                <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Type our mail address" required>
-                                <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                                    <input type="text" name="b_e44c1f194bec93e238615469e_f6f826e769" tabindex="-1" value="">
-                                </div>
-                                <input type="submit" value="subscribe" name="subscribe" id="mc-embedded-subscribe" class="mc-button">
+                            <form action="{% url 'Post:search_results' %}" method="get" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate">
+                                <input type="text" value="" name="q" class="email" id="mce-EMAIL" placeholder="Search Here" required>
+
+                                <input type="submit" value="Search" name="subscribe" id="mc-embedded-subscribe" class="mc-button">
                                 <div id="subscribe-result">
                                 </div>
                             </form>
@@ -152,7 +153,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-sm-6 col-xs-12 ">
-                    <p>Copyright &copy; 2020<a href="http://google.com/">_____</a>all right reserved.</p>
+                    <p>Copyright &copy; 2020<a href="http://medemer.com/">Green Legacy Team</a>all right reserved.</p>
                 </div>
                 <div class="col-md-6 col-sm-6 col-xs-12 ">
                 </div>
@@ -160,7 +161,7 @@
         </div>
     </section>
     <!--FOOTER-BOTTOM-AREA -->
-    <script src="{% static 'main/js/jquery.min.js' %}"></script>
+    <!-- <script src="{% static 'main/js/jquery.min.js' %}"></script> -->
     <script src="{% static 'main/js/bootstrap.min.js' %}"></script>
     <script src="{% static 'main/js/plugins.js' %}"></script>
     <script src="{% static 'main/js/ajax-mail.js' %}"></script>

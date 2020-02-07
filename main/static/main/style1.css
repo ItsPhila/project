@@ -715,6 +715,7 @@ a.pricing-btn.blue-btn.homepage-one-all-features-btn.action-btn.slider-links-2 {
     background-color: #ddd;
     position: relative;
     z-index: 1;
+    margin-bottom: -3%;
 }
 .slider-content-area-table {
     display: table;
@@ -722,7 +723,7 @@ a.pricing-btn.blue-btn.homepage-one-all-features-btn.action-btn.slider-links-2 {
 }
 .slider-2-bg .single-slider-item {
     padding-top: 140px;
-    padding-bottom: 140px;
+    padding-bottom: 240px;
     z-index: 999;
     position: relative;
 }
@@ -1539,12 +1540,12 @@ a.pricing-btn.blue-btn.homepage-one-all-features-btn.action-btn.slider-links-2 {
 
 
 .section-title {
-    margin-bottom: 80px;
+    margin-bottom: 50px;
     text-align: center;
 }
 
 .section-title span {
-    color: #5dafef;
+    color: #4caf50;
 }
 
 .section-title p {
@@ -1735,14 +1736,16 @@ section.pricing-table-area {
     color: #fff;
     box-shadow: 0px 10px 35px 0px rgba(1, 68, 137, 0.1);
 }
-
+.subhead::first-letter {
+    initial-letter: 2;
+  }
 
 /*----------------------------------------
              FEATURE ONE STYLE
 ------------------------------------------*/
 
 .feature-one-right {
-    padding: 115px 0;
+    padding: 5% 0 2% 0;
 }
 .feature-one-left {
     padding-top: 160px;
@@ -1873,7 +1876,7 @@ section.homepage-2.fan-fact-area.fan-fact-area-bg:after{
 
 .service-area {
     padding-top: 95px;
-    padding-bottom: 80px;
+    /* padding-bottom: 80px; */
 }
 .service-teatimonial .service-teatimonial-single-item {
     padding: 40px 15px;
@@ -2222,7 +2225,8 @@ section.brand-area {
        FOOTER AREA STYLE
 ------------------------------------------*/
 section.footer-area {
-    padding: 50px 0 10px 0;
+    margin-top: 5%;
+    padding: 50px 0 30px 0;
     /* background-image: url(img/bg/footer-bg.jpg); */
     background-size: cover;
     background-position: center;
@@ -2287,7 +2291,7 @@ p.contact-info a {
     color: #5dafef;
     padding-left: 8px;
 }
-.single-footer input[type="email"] {
+.single-footer input[type="text"] {
     background: #fff;
     color: #a6bbd0;
     border: none;
@@ -2352,12 +2356,14 @@ section.foter-botom-area p a {
     text-decoration: none;
     padding: 0 7px;
     font-size: 16px;
+    
 }
 
 section.foter-botom-area {
     color: #fff;
     background: #28314C;
-    padding: 20px 0 8px
+    padding: 20px 0 8px;
+
 }
 
 

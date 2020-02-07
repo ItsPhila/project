@@ -39,9 +39,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'post.apps.PostConfig',
     'users',
+    'places',
     'main.apps.MainConfig',
     'clear_cache',
     'crispy_forms',
+    'location_field.apps.DefaultConfig',
+
 
 ]
 

@@ -1,45 +1,30 @@
 {% extends 'main/base.html' %}
+{% load static %}
 {% load crispy_forms_tags %}
-{% block  content %} 
- <!-- REGISTER AREA -->
-    <section class=""></section>
-      <!-- <div class="container">
-          <div class="row">
-              <div class="col-md-12">
-                  <div class="about-content-table">
-                      <div class="about-content-table-sell">
-                          <div class="about-heading"> -->
-                            <div style="text-align: center; margin-bottom: 3%; margin-top: 3%; " class="container">
-                                <h2>Register</h2>
+{% block  content %}
+    <!-- LOGIN AREA -->
+    <section class="" >
+        <div class="container" style=" box-shadow: 0px 5px 24px -6px rgba(0,0,0,0.71); max-width: 30%; margin: 3% 0 5% 35%; padding: 0 5% 5% 5%;">
+            <div class="row" >
+                <div class="col-md-12">
+                    <div class="about-content-table" >
+                        <div class="about-content-table-sell" >
+                            <div class="about-heading" >
+                                <h2>Register Account</h2>
                             </div>
-                          <form method = "POST" id=".domain-checkup" class="form-input" style="max-width: 20%; margin-left: 40%; margin-bottom: 5%;" > 
-
-                              {% csrf_token %}
-                            {{ form|crispy }}
-                      
-                            <input type= "submit" value="Login "  class="btn btn-primary" style="margin-left:-3.5%;">
-                      
-                      
+                            <form method = "POST" id=".domain-checkup" class="form-input"  >
+                                {% csrf_token %}
+                                {{ form|crispy }}
+                                <input type= "submit" value="Sign Up " id=".submit-button" class="btn btn-primary" style="margin-left:-3.5%;">
+                                <a href="{% url 'login' %}"><input type= "button" value="Sign In Instead" id=".submit-button" class="btn btn-success" style="margin-left:10%;"></a>
                             </form> 
-                            <div class="about-links">
-                                  <ul>
-                                      <li></li>
-                                      <li></li>
-                                  </ul>
-                              </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </section>
 
-  <!-- LOGIN AREA END -->
-  {% endblock %}
-      
-      
-      
-      
-    
-       
-      
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOGIN AREA END -->
+    {% endblock %}
