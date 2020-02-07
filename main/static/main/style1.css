@@ -2223,15 +2223,15 @@ section.brand-area {
 ------------------------------------------*/
 section.footer-area {
     padding: 50px 0 10px 0;
-    background-image: url(img/bg/footer-bg.jpg);
+    /* background-image: url(img/bg/footer-bg.jpg); */
     background-size: cover;
     background-position: center;
-    background-color: #ddd;
+    background-color:#4caf50;
 }
 .footer-single-item .logo img {max-width: 120px;}
 
 .footer-single-item p {
-    color: #536d87;
+    color: ivory;
     margin-bottom: 28px;
 }
 
@@ -2246,12 +2246,12 @@ p.contact-info span {
     position: absolute;
     top: 5px;
     left: 0;
-    color: #5dafef;
+    color: #28314C;
     font-size: 16px;
 }
 
 p.contact-info a {
-    color: #536d87;
+    color: ivory;
     text-decoration: none;
     transition: .3s;
     font-weight: 500;
@@ -2259,7 +2259,7 @@ p.contact-info a {
 .single-footer h2 {
     margin-bottom: 40px;
     font-size: 24px;
-    color: #5dafef;
+    color: #28314C;
     text-transform: capitalize;
     font-weight: 600;
 }
@@ -2276,7 +2276,7 @@ p.contact-info a {
 
 .footer-links a {
     display: inline-block;
-    color: #536d87;
+    color: ivory;
     font-weight: 500;
     margin-bottom: 16px;
     text-decoration: none;
@@ -2575,8 +2575,8 @@ section.about-area {
     font-weight: 600;
 }
 .about-heading {
-    padding-top: 133px;
-    padding-bottom: 85px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 .about-links {
     text-align: left;
