@@ -8,6 +8,7 @@ class Places(models.Model):
     title = models.CharField(max_length=50)
     pubdate = models.DateTimeField(default = timezone.now())
     myimage = models.ImageField(upload_to='images/', null=True)
+    location = PlainLocationField(based_fields=['city'], zoom= 1, null=True)
 
 
     def pre(self):
