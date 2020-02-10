@@ -23,7 +23,7 @@ TMP_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = 'h1!9u0grw!0z4e$=%z4-h+em98!#ocl-xajm*7@oo&ye_%1zsx'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['itsphila.pythonanywhere.com','127.0.0.1']
 
